@@ -6,7 +6,7 @@ This project provides a complete simulation of data transmission over an unrelia
 
 ---
 
-## Header 2 Implemented Error Control Methods
+## Implemented Error Control Methods
 
 All required methods are implemented in the `control.py` module and successfully tested for detecting errors introduced by the server.
 
