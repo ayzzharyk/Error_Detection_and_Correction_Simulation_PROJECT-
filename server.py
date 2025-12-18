@@ -17,7 +17,7 @@ def bits_to_char(bits):
     # обработка может быть некорректной, но для простоты оставляем цикл таким
     for i in range(0, len(bits), 8):
         byte = bits[i:i+8]
-        if len(byte) == 8: # Проверяем, что это полный байт
+        if len(byte) == 8 and all(b in '01' for b in byte): # Проверяем, что это полный байт
             chars.append(chr(int(byte, 2)))
     return ''.join(chars)
 

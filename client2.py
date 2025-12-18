@@ -36,7 +36,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
     # Печатаем форматированный результат
     print("\n--- RESULT ---")
-    print(f"Received Data: {data}")
+    try:
+        print(f"Received Data: {data}")
+    except UnicodeEncodeError:
+        print(f"Received Data: {repr(data)}")
     print(f"Method: {method_names[method]} ({method})")
     print(f"Sent Check Bits: {control}")
     print(f"Computed Check Bits: {new_ctrl}")
